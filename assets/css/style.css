@@ -1,11 +1,64 @@
 body {
-    background-color: #080808;;
+  background-color: #151515;
+  font-family: "Cascadia Code";
 }
 
 #header {
-    width: 100%;
-    height: 100vh;
-    background-image: url(../imgs/header.jpg);
-    background-size: cover;
-    background-position: center;
+  width: 100%;
+  height: 100vh;
+  background-image: url(../imgs/header.jpg);
+  background-size: cover;
+  background-position: center;
+}
+
+.navbar-brand img {
+  height: 40px;
+}
+
+nav .centered {
+  width: inherit;
+}
+
+.navbar {
+  background-color: #151515;
+}
+
+.navbar .container {
+  display: flex;
+}
+
+.navbar a {
+  color: #eeeeee !important;
+}
+
+.navbar li a {
+  position: relative;
+}
+.navbar li a {
+  margin-left: 20px;
+}
+.navbar li a::after {
+  content: "";
+  width: 0%;
+  height: 3px;
+  background: #c73659;
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  transition: 300ms;
+  transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);;
+}
+
+.navbar li a:hover::after {
+  width: 100%;
+}
+
+.centered ul {
+  display: flex;
+  justify-content: space-around;
+  margin-left: 40px;
+}
+
+.navbar-toggler {
+  color: #eeeeee !important;
 }
