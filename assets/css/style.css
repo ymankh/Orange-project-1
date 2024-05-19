@@ -1,5 +1,5 @@
 body {
-  background-color: #151515;
+  background-color: #000;
   font-family: "Cascadia Code";
   color: #eee;
 }
@@ -164,4 +164,14 @@ nav .centered {
   margin-top: 5px;
   margin-bottom: 10px;
   margin-right: 50px;
+}
+
+#services img {
+  width: 100px;
+  color: #eee;
+  margin-left: auto;
+}
+
+#services div.col {
+  padding: 10px;
 }
