@@ -64,6 +64,7 @@ nav .centered {
   color: #eee;
 }
 
+/* -------Hero ------ */
 .header-text {
   margin-top: 20%;
   font-size: 30px;
@@ -75,6 +76,27 @@ nav .centered {
 
 .header-text h1 span {
   color: #c73659;
+}
+
+@media (max-width: 991.98px) {
+  .header-text {
+    margin-top: 20%;
+    font-size: 20px;
+    margin-left: 5%;
+  }
+  .header-text h1 {
+    font-size: 40px;
+  }
+}
+@media (max-width: 767.98px) {
+  .header-text {
+    margin-top: 20%;
+    font-size: 20px;
+    margin-left: 0;
+  }
+  .header-text h1 {
+    font-size: 40px;
+  }
 }
 /* ----------- About ----------- */
 
@@ -216,4 +238,8 @@ nav .centered {
 .service-card:hover {
   background-color: #c73659;
   scale: 1.1;
+}
+
+.work-container {
+  
 }
