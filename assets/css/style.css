@@ -1,6 +1,7 @@
 body {
   background-color: #151515;
   font-family: "Cascadia Code";
+  color: #eee;
 }
 
 #header {
@@ -46,7 +47,7 @@ nav .centered {
   left: 0;
   bottom: -4px;
   transition: 300ms;
-  transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);;
+  transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
 }
 
 .navbar li a:hover::after {
@@ -60,5 +61,107 @@ nav .centered {
 }
 
 .navbar-toggler {
-  color: #eeeeee !important;
+  color: #eee;
+}
+
+.header-text {
+  margin-top: 20%;
+  font-size: 30px;
+  margin-left: 5%;
+}
+.header-text h1 {
+  font-size: 60px;
+}
+
+.header-text h1 span {
+  color: #c73659;
+}
+/* ----------- About ----------- */
+
+.row {
+  --bs-gutter-x: 0rem;
+}
+
+.about-col-2 {
+  padding: 20px;
+}
+.about-col-1 img {
+  width: 100%;
+  margin: 0;
+  border-radius: 15px;
+}
+
+.about-me h2 {
+  font-size: 60px;
+  font-weight: 600;
+  color: #eee;
+}
+
+.about-me-tabs {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.about-me-tabs .tab-link {
+  margin-right: 50px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  position: relative;
+}
+
+.tab-link:after {
+  width: 0%;
+  content: "";
+  position: absolute;
+  background: #c73659;
+  height: 3px;
+  left: 0;
+  bottom: -8px;
+  transition: 350ms;
+  transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
+.tab-link.active:after {
+  width: 80%;
+}
+.tap-content {
+  display: none;
+  position: relative;
+  overflow: hidden;
+  transition: opacity 350ms 1ms;
+}
+
+@keyframes tap-content {
+  0% {
+    opacity: 0%;
+    right: 100px;
+  }
+  100% {
+    opacity: 100%;
+    right: 0px;
+  }
+}
+
+.tap-content.active {
+  display: block;
+  animation-name: tap-content;
+  animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  animation-duration: 350ms;
+}
+
+.tap-content ul {
+  margin-top: 30px;
+  list-style: none;
+}
+.tap-content ul li span.skill-title {
+  color: #c73659;
+}
+
+.tap-content ul li span.skill-description {
+  display: inline-block;
+  margin-left: 20px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  margin-right: 50px;
 }
