@@ -165,13 +165,24 @@ nav .centered {
   margin-bottom: 10px;
   margin-right: 50px;
 }
-
+/* ---------- services ------------ */
 #services img {
-  width: 100px;
+  width: 20%;
   color: #eee;
   margin-left: auto;
 }
 
-#services div.col {
+.services-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 40px;
+  margin: 0 50px;
+  margin-top: 50px;
+}
+
+.service-card {
+  width: 80%;
+  margin: auto;
+  background-color: #151515;
   padding: 10px;
 }
