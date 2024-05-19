@@ -166,23 +166,54 @@ nav .centered {
   margin-right: 50px;
 }
 /* ---------- services ------------ */
-#services img {
+.service-card img {
   width: 20%;
   color: #eee;
   margin-left: auto;
+  margin-bottom: 20px;
+}
+
+.service-card h3 {
+  margin-bottom: 20px;
+}
+
+.service-card p {
+  margin-bottom: 40px;
+}
+
+.service-card a {
+  color: #eee;
+  text-decoration: none;
+  display: block;
+  position: absolute;
+  bottom: 20px;
+  left: 35%;
 }
 
 .services-row {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 40px;
-  margin: 0 50px;
+  /* margin: 0 50px; */
   margin-top: 50px;
 }
 
 .service-card {
-  width: 80%;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  border-radius: 15px;
   margin: auto;
   background-color: #151515;
-  padding: 10px;
+  padding: 20px;
+  height: 100%;
+  transition: background-color 0.35s, scale 0.35s;
+  transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+
+  
+}
+
+.service-card:hover {
+  background-color: #c73659;
+  scale: 1.1;
 }
