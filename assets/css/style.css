@@ -301,7 +301,19 @@ h2 {
   margin: auto;
 }
 
-.work-cover a img{
+.work-cover a img {
   margin: 15%;
   width: 60%;
+}
+
+@media (max-width: 767.98px) {
+  .work-cover h3 {
+    margin-top: 250px;
+    margin-bottom: 20px;
+  }
+}
+ /* ------------- footer ------------  */
+footer {
+  margin-top: 50px;
+  background-color: #151515;
 }
