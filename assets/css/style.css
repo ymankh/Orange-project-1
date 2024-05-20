@@ -449,4 +449,5 @@ footer div {
 
 .download-cv:active {
   background-color: #c6556f;
+  scale: 0.8;
 }
