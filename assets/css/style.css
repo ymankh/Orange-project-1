@@ -317,22 +317,38 @@ h2 {
   }
 }
 
-
 /* ---------- Contact Me ---------- */
-.location-map-container{
-    
+.location-map-container {
+  overflow: hidden;
+  height: 300px;
 }
+
 .location-map {
   width: 100%;
   height: 100%;
 }
 /* ------------- footer ------------  */
-
-footer {
-  margin-top: 50px;
-  background-color: #151515;
+#contact h3 {
+  font-size: 20px;
 }
 
 .contact-section {
   margin-top: 50px;
+}
+
+#contact > div {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 2fr;
+}
+
+footer {
+  background-color: #151515;
+  margin-top: 50px;
+}
+
+footer div {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
 }
