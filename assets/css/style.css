@@ -429,3 +429,24 @@ footer div {
   line-height: 50px;
   text-align: center;
 }
+
+.download-cv {
+  display: inline-block;
+  margin-top: 20px;
+  border-radius: 8px;
+  padding: 0 10px;
+  height: 40px;
+  line-height: 40px;
+  
+  text-align: center;
+  border: 1px solid #c73659;
+  transition: 350ms;
+}
+
+.download-cv:hover {
+  background-color: #c73659;
+}
+
+.download-cv:active {
+  background-color: #c6556f;
+}
