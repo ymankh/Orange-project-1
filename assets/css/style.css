@@ -66,6 +66,12 @@ a {
   color: #eee;
 }
 
+@media (max-width: 767.98px) {
+  .navbar li a:hover::after {
+    width: 60px;
+  }
+}
+
 /* -------Hero ------ */
 .header-text {
   margin-top: 20%;
@@ -193,9 +199,9 @@ h2 {
 }
 
 @media (max-width: 477.98px) {
-    
-
-  
+  .about-me-tabs .tab-link {
+    margin-bottom: 20px;
+  }
 }
 
 /* ---------- services ------------ */
@@ -334,55 +340,6 @@ h2 {
   width: 100%;
   height: inherit;
 }
-/* ------------- footer ------------  */
-#contact h3 {
-  font-size: 20px;
-}
-
-.contact-section {
-  margin-top: 50px;
-}
-
-#contact > div {
-  display: grid;
-  gap: 20px;
-  grid-template-columns: 1fr 2fr;
-}
-
-footer {
-  background-color: #151515;
-  margin-top: 50px;
-}
-
-footer div {
-  height: 50px;
-  line-height: 50px;
-  text-align: center;
-}
-
-a.icon {
-  display: block;
-  background-color: #eee;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  position: relative;
-  margin-top: 30px;
-  box-shadow: 0px 0px 0px #c73659;
-  transition: box-shadow 350ms;
-  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-}
-
-a.icon:hover {
-  box-shadow: 2px 2px 5px #c73659;
-}
-
-.contact-links img {
-  width: 20px;
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
-}
 
 .link-tooltip {
   overflow: hidden;
@@ -418,4 +375,57 @@ a.icon:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+}
+#contact h3 {
+  font-size: 20px;
+}
+.contact-section {
+  margin-top: 50px;
+}
+#contact > div {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 1fr 2fr;
+}
+
+a.icon {
+  display: block;
+  background-color: #eee;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  position: relative;
+  margin-top: 30px;
+  box-shadow: 0px 0px 0px #c73659;
+  transition: box-shadow 350ms;
+  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+a.icon:hover {
+  box-shadow: 2px 2px 5px #c73659;
+}
+
+.contact-links img {
+  width: 20px;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+@media (max-width: 768px) {
+  #contact > div {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+}
+/* ------------- footer ------------  */
+footer {
+  background-color: #151515;
+  margin-top: 50px;
+}
+
+footer div {
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
 }
