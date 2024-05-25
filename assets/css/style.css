@@ -272,8 +272,10 @@ h2 {
 
 .work-item img {
   width: 100%;
-  transition: scale 350ms;
+  transition: scale 350ms, filter 350ms;
+  filter: blur(0px);
   animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+
 }
 
 .work-cover {
@@ -295,8 +297,9 @@ h2 {
   height: 100%;
 }
 
-.work-item:hover img {
+.work-item:hover > img {
   scale: 1.05;
+  filter: blur(20px);
 }
 
 .work-cover h3 {
