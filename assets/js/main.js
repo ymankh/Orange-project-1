@@ -13,3 +13,5 @@ function setActiveAboutTab(id) {
   document.getElementById(id).classList.add("active");
   document.getElementById(`${id}-Content`).classList.add("active");
 }
+
+

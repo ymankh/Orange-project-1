@@ -1,13 +1,22 @@
+* {
+  --primary: #c73659;
+  --font-color: #eee;
+  --background: #151515;
+
+  --transition-time: 350ms;
+  --timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+}
+
 body {
-  background-color: #000;
+  background-color: black;
   font-family: "Cascadia Code";
-  color: #eee;
+  color: var(--font-color);
 }
 
 #header {
   width: 100%;
   height: 100vh;
-  background-image: url(../imgs/header.jpg);
+  background-image: url(../imgs/header.jpg) ;
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
@@ -22,7 +31,7 @@ nav .centered {
 }
 
 .navbar {
-  background-color: #151515;
+  background-color: var(--background);
 }
 
 .navbar .container {
@@ -30,7 +39,7 @@ nav .centered {
 }
 
 a {
-  color: #eeeeee !important;
+  color: var(--font-color) !important;
   text-decoration: none;
 }
 
@@ -44,12 +53,12 @@ a {
   content: "";
   width: 0%;
   height: 3px;
-  background: #c73659;
+  background: var(--primary);
   position: absolute;
   left: 0;
   bottom: -4px;
-  transition: 300ms;
-  transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transition: var(--transition-time);
+  transition-timing-function: var(--timing-function);
 }
 
 .navbar li a:hover::after {
@@ -63,7 +72,7 @@ a {
 }
 
 .navbar-toggler {
-  color: #eee;
+  color: var(--font-color);
 }
 
 @media (max-width: 767.98px) {
@@ -83,7 +92,7 @@ a {
 }
 
 .header-text h1 span {
-  color: #c73659;
+  color: var(--primary);
 }
 
 @media (max-width: 991.98px) {
@@ -125,7 +134,7 @@ a {
 h2 {
   font-size: 60px;
   font-weight: 600;
-  color: #eee;
+  color: var(--font-color);
   margin: 30px 0;
 }
 
@@ -146,12 +155,12 @@ h2 {
   width: 0%;
   content: "";
   position: absolute;
-  background: #c73659;
+  background: var(--primary);
   height: 3px;
   left: 0;
   bottom: -8px;
-  transition: 350ms;
-  transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transition: var(--transition-time);
+  transition-timing-function: var(--timing-function);
 }
 
 .tab-link.active:after {
@@ -161,7 +170,7 @@ h2 {
   display: none;
   position: relative;
   overflow: hidden;
-  transition: opacity 350ms 1ms;
+  transition: opacity var(--transition-time) 1ms;
 }
 
 @keyframes tap-content {
@@ -178,8 +187,8 @@ h2 {
 .tap-content.active {
   display: block;
   animation-name: tap-content;
-  animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
-  animation-duration: 350ms;
+  animation-timing-function: var(--timing-function);
+  animation-duration: var(--transition-time);
 }
 
 .tap-content ul {
@@ -187,7 +196,7 @@ h2 {
   list-style: none;
 }
 .tap-content ul li span.skill-title {
-  color: #c73659;
+  color: var(--primary);
 }
 
 .tap-content ul li span.skill-description {
@@ -208,7 +217,7 @@ h2 {
 
 .service-card img {
   width: 20%;
-  color: #eee;
+  color: var(--font-color);
   margin-left: auto;
   margin-bottom: 20px;
 }
@@ -222,7 +231,7 @@ h2 {
 }
 
 .service-card a {
-  color: #eee;
+  color: var(--font-color);
   text-decoration: none;
   display: block;
   position: absolute;
@@ -244,15 +253,15 @@ h2 {
   width: 100%;
   border-radius: 15px;
   margin: auto;
-  background-color: #151515;
+  background-color: var(--background);
   padding: 20px;
   height: 100%;
   transition: background-color 0.35s, scale 0.35s;
-  transition-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  transition-timing-function: var(--timing-function);
 }
 
 .service-card:hover {
-  background-color: #c73659;
+  background-color: var(--primary);
   scale: 1.1;
 }
 
@@ -272,10 +281,9 @@ h2 {
 
 .work-item img {
   width: 100%;
-  transition: scale 350ms, filter 350ms;
+  transition: scale var(--transition-time), filter var(--transition-time);
   filter: blur(0px);
-  animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
-
+  animation-timing-function: var(--timing-function);
 }
 
 .work-cover {
@@ -285,15 +293,15 @@ h2 {
   bottom: 0;
   left: 0;
   width: 100%;
-  background: linear-gradient(rgb(0, 0, 0, 0.5), #c73659);
-  animation-timing-function: cubic-bezier(0.18, 0.89, 0.32, 1.28);
+  background: linear-gradient(rgb(0, 0, 0, 0.5), var(--primary));
+  animation-timing-function: var(--timing-function);
   z-index: 1;
-  transition: height 350ms;
+  transition: height var(--transition-time);
   height: 0;
 }
 
 .work-item:hover .work-cover {
-  transform: visibility 0 350ms;
+  transform: visibility 0 var(--transition-time);
   height: 100%;
 }
 
@@ -314,7 +322,7 @@ h2 {
 
 .work-cover a {
   display: block;
-  background-color: #eee;
+  background-color: var(--font-color);
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -350,11 +358,11 @@ h2 {
   position: absolute;
   left: 0;
   top: -30px;
-  background-color: #c73659;
+  background-color: var(--primary);
   border-radius: 15px;
   width: 0px;
   text-align: center;
-  transition: width 350ms;
+  transition: width var(--transition-time);
   animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
@@ -393,19 +401,19 @@ h2 {
 
 a.icon {
   display: block;
-  background-color: #eee;
+  background-color: var(--font-color);
   width: 40px;
   height: 40px;
   border-radius: 50%;
   position: relative;
   margin-top: 30px;
-  box-shadow: 0px 0px 0px #c73659;
-  transition: box-shadow 350ms;
-  transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0px 0px 0px var(--primary);
+  transition: box-shadow var(--transition-time);
+  transition-timing-function: var(--timing-function);
 }
 
 a.icon:hover {
-  box-shadow: 2px 2px 5px #c73659;
+  box-shadow: 2px 2px 5px var(--primary);
 }
 
 .contact-links img {
@@ -423,7 +431,7 @@ a.icon:hover {
 }
 /* ------------- footer ------------  */
 footer {
-  background-color: #151515;
+  background-color: var(--background);
   margin-top: 50px;
 }
 
@@ -440,17 +448,17 @@ footer div {
   padding: 0 10px;
   height: 40px;
   line-height: 40px;
-  
+
   text-align: center;
-  border: 1px solid #c73659;
-  transition: 350ms;
+  border: 1px solid var(--primary);
+  transition: var(--transition-time);
 }
 
 .download-cv:hover {
-  background-color: #c73659;
+  background-color: var(--primary);
 }
 
 .download-cv:active {
   background-color: #c6556f;
-  scale: 0.8;
+  scale: 0.95;
 }
