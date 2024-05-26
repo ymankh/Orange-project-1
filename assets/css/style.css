@@ -305,9 +305,8 @@ h2 {
   height: 100%;
 }
 
-.work-item:hover > img {
+.work-item:hover img {
   scale: 1.05;
-  filter: blur(20px);
 }
 
 .work-cover h3 {
