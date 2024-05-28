@@ -279,7 +279,7 @@ h2 {
   position: relative;
 }
 
-.work-item img {
+.work-item  img {
   width: 100%;
   transition: scale var(--transition-time), filter var(--transition-time);
   filter: blur(0px);
@@ -305,8 +305,9 @@ h2 {
   height: 100%;
 }
 
-.work-item:hover img {
+.work-item:hover > img {
   scale: 1.05;
+  filter: blur(20px);
 }
 
 .work-cover h3 {
